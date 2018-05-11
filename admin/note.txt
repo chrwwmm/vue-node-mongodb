@@ -1,0 +1,18 @@
+
+
+Q1:PHP报错:Submitted URI too large!
+
+使用浏览器发送GET请求会受浏览器URL长度的限制，不使用浏览器的GET请求也会受服务器端的限制。
+
+使用POST解决了问题。
+
+Q2:axios post跨域
+
+原因:服务器端只设置了 Access-Control-Allow-Origin:*
+
+还需要添加 Access-Control-Allow-Headers:Authorization,Origin, X-Requested-With, Content-Type, Accept 来设置允许跨域的http请求头(具体根据代码来定)，类似的还有 Access-Control-Allow-Methods:GET,POST
+
+
+Q3:id已存在如何提示?遍历?
+
+Q4:点击其中一条上传了一张图片a，点击另外一条，图片预览那里也会变成这张图片a

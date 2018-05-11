@@ -1,0 +1,24 @@
+启动项目 nodemon app
+
+在admin的article.vue中，读取的是article和theme两张表的数据，而增删改的时候却只对article进行操作。因为当article表为空时，若只读取article表，在新增文章（article）时是无法选择主题（theme）的。
+
+一对多/多对多
+type: {
+	type: Schema.ObjectId,
+	ref: 'Theme'
+}
+
+list: [{
+	type: Schema.ObjectId,
+	ref: 'Article'
+}]
+
+
+$set 用来指定一个键并更新键值，若键不存在并创建
+$ne/$addToSet 主要给数组类型键值添加一个元素时，避免在数组中产生重复数据，$ne在有些情况是不通行的
+
+Q1.Can't set headers after they are sent.
+
+A1.return应该加到回调函数前边。
+
+Q2.el-table-column如何设置高度
